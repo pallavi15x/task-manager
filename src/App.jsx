@@ -8,6 +8,8 @@ function App() {
  const [tasks, setTasks] = useState(() => {
   const savedTasks = localStorage.getItem("tasks");
   return savedTasks ? JSON.parse(savedTasks) : [];
+const completedTasks = tasks.filter(task => task.completed).length;
+
 });
  useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -33,8 +35,10 @@ function App() {
 
   return (
 <div className="container">
-      <h1>Task Manager</h1>
-
+      <h1> MY Task Manager</h1>
+<p className="task-count">
+Total Tasks: {tasks.length} | Completed: {completedTasks}
+</p>
      
      <div className="input-box">
 

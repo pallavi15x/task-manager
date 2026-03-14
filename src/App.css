@@ -60,6 +60,11 @@ li{
   background:#334155;
   border-radius:5px;
 }
+.task-count{
+margin-bottom:15px;
+font-weight:bold;
+color:#444;
+}
 .task-item{
 display:flex;
 justify-content:space-between;
