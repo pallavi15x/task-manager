@@ -60,3 +60,26 @@ li{
   background:#334155;
   border-radius:5px;
 }
+.task-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px;
+margin-top:10px;
+background:#f3f4f6;
+border-radius:6px;
+}
+
+.completed{
+text-decoration:line-through;
+color:gray;
+}
+
+.delete-btn{
+background:#ef4444;
+color:white;
+border:none;
+padding:5px 10px;
+border-radius:5px;
+cursor:pointer;
+}

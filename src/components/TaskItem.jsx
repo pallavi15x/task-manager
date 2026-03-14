@@ -1,24 +1,16 @@
 function TaskItem({ task, index, toggleComplete, deleteTask }) {
   return (
-    <li style={{ margin: "10px 0" }}>
-
+    <li className="task-item">
       <span
-        style={{
-          textDecoration: task.completed ? "line-through" : "none",
-          marginRight: "10px"
-        }}
+        onClick={() => toggleComplete(index)}
+        className={task.completed ? "completed" : ""}
       >
         {task.text}
       </span>
 
-      <button onClick={() => toggleComplete(index)}>
-        ✔
-      </button>
-
-      <button onClick={() => deleteTask(index)}>
+      <button onClick={() => deleteTask(index)} className="delete-btn">
         Delete
       </button>
-
     </li>
   );
 }
